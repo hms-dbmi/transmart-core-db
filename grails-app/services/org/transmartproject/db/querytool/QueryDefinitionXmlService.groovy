@@ -88,8 +88,7 @@ class QueryDefinitionXmlService implements QueryDefinitionXmlConverter {
          * It's possible the schema is only used to generate Java classes
          * using JAXB and that there's never any validation against the schema
          */
-        xml.'qd:query_definition'('xmlns:qd': "http://www.i2b2" +
-                ".org/xsd/cell/crc/psm/querydefinition/1.1/") {
+        xml.'query_definition' {
             query_name definition.name
 
             definition.panels.each { Panel panelArg ->

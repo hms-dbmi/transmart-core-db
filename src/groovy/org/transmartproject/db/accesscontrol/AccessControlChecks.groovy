@@ -199,10 +199,11 @@ class AccessControlChecks {
                  * handled especially */
                 new ConceptKey(item.conceptKey).tableCode !=
                        ACROSS_TRIALS_TABLE_CODE
+				
             }.collect { Item item ->
                 /* this could be optimized by adding a new method in
                  * StudiesResource */
-                def concept = conceptsResource.getByKey(item.conceptKey)
+                def concept = conceptsResource.getByKey(item.conceptKey)				
                 def study = concept.study
 
                 if (study == null) {
@@ -211,15 +212,21 @@ class AccessControlChecks {
 
                 study
             } as Set
-
+		
             foundStudies.every { Study study1 ->
                 if (study1 == null) {
-                    return false
+					//Point of contention, we didn't use transmart-ism 'study'
+					return true
+                    //return false
                 }
                 canPerform user, operation, study1
             }
         }
-
+		
+		
+		println "-----RES"
+		println "res-$res"
+		
         if (!res) {
             log.warn "User $user defined access for definition $definition " +
                     "because it doesn't include one non-inverted panel for" +

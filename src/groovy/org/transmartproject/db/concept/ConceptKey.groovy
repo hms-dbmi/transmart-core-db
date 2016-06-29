@@ -46,8 +46,8 @@ class ConceptKey {
         if (!matcher.find(3))
             throw new IllegalArgumentException('No \\ character found after ' +
                     'position 2')
-
-        tableCode = key.substring(2, matcher.start())
+						
+        tableCode = key.substring(2, matcher.start())		
         conceptFullName = new ConceptFullName(key.substring(matcher.start()))
     }
 

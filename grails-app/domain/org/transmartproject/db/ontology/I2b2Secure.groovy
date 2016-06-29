@@ -26,7 +26,7 @@ class I2b2Secure extends AbstractI2b2Metadata implements Serializable {
     static String backingTable = 'I2B2_SECURE'
 
     static mapping = {
-        table         name: 'I2B2_SECURE', schema: 'I2B2METADATA'
+        table         name: 'I2B2_SECURE', schema: 'DEAPP'
         version       false
 
         id composite: ['fullName', 'name']
