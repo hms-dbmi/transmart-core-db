@@ -64,7 +64,9 @@ grails.project.dependency.resolution = {
 
     repositories {
         mavenLocal()
+		mavenCentral()
         mavenRepo 'https://repo.thehyve.nl/content/repositories/public/'
+		mavenRepo 'https://repo.transmartfoundation.org/content/repositories/public/'
     }
 
     dependencies {
@@ -78,23 +80,23 @@ grails.project.dependency.resolution = {
             }
         }
 
-//        test('junit:junit:4.11') {
-//            transitive = false /* don't bring hamcrest */
-//            export     = false
-//        }
-//
-//        test('org.gmock:gmock:0.9.0-r435-hyve2') {
-//            transitive = false /* don't bring groovy-all */
-//            export     = false
-//        }
-//
-//        /* for reasons I don't want to guess (we'll move away from ivy soon
-//         * anyway), javassist is not being included in the test classpath
-//         * when running test-app in Travis even though the hibernate plugin
-//         * depends on it */
-//        test('org.javassist:javassist:3.16.1-GA') {
-//            export = false
-//        }
+        test('junit:junit:4.11') {
+            transitive = false /* don't bring hamcrest */
+            export     = false
+        }
+
+        test('org.gmock:gmock:0.9.0-r435-hyve2') {
+            transitive = false /* don't bring groovy-all */
+            export     = false
+        }
+
+        /* for reasons I don't want to guess (we'll move away from ivy soon
+         * anyway), javassist is not being included in the test classpath
+         * when running test-app in Travis even though the hibernate plugin
+         * depends on it */
+        test('org.javassist:javassist:3.16.1-GA') {
+            export = false
+        }
     }
 
     plugins {
