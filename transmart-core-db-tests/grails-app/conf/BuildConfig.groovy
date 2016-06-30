@@ -58,10 +58,10 @@ if (enableClover) {
 
 grails.project.dependency.resolver = 'maven'
 grails.project.dependency.resolution = {
-    log "warn"
+    log "debug"
 
     inherits('global') {}
-
+	pom true
     repositories {
         mavenLocal()
 		mavenCentral()
