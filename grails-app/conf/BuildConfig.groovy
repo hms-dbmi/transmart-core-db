@@ -21,11 +21,11 @@ grails.project.repos."${grails.project.repos.default}".url = 'https://repo.thehy
 
 grails.project.dependency.resolver = 'maven'
 grails.project.dependency.resolution = {
-    log "warn"
+    log "debug"
     legacyResolve false
 
     inherits('global') {}
-	pom true
+
     repositories {
         //  grailsPlugins()
         // grailsHome()

@@ -61,7 +61,7 @@ grails.project.dependency.resolution = {
     log "debug"
 
     inherits('global') {}
-	pom true
+	
     repositories {
         mavenLocal()
 		mavenCentral()
