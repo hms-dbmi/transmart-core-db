@@ -30,7 +30,7 @@ import org.transmartproject.db.support.DatabasePortabilityService
 
 class TransmartCoreGrailsPlugin {
     // the plugin version
-    def version = "1.2.4"
+    def version = "1.2.4.DBMI"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.3 > *"
     // resources that are excluded from plugin packaging
