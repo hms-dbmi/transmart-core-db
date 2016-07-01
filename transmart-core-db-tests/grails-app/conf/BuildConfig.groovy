@@ -61,12 +61,10 @@ grails.project.dependency.resolution = {
     log "debug"
 
     inherits('global') {}
-	
+
     repositories {
         mavenLocal()
-		mavenCentral()
         mavenRepo 'https://repo.thehyve.nl/content/repositories/public/'
-		mavenRepo 'https://repo.transmartfoundation.org/content/repositories/public/'
     }
 
     dependencies {
