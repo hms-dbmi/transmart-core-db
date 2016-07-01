@@ -27,19 +27,17 @@ grails.project.dependency.resolution = {
     inherits('global') {}
 
     repositories {
-        //  grailsPlugins()
-        // grailsHome()
-        grailsCentral()
-
         mavenLocal()
         mavenCentral()
 
+		grailsCentral()
+		
         mavenRepo 'https://repo.transmartfoundation.org/content/repositories/public/'
         mavenRepo 'https://repo.thehyve.nl/content/repositories/public/'
     }
 
     dependencies {
-        compile 'org.transmartproject:transmart-core-api:1.2.2-hackathon-SNAPSHOT'
+        compile 'org.transmartproject:transmart-core-api:1.2.2-hackathon-DBMI-SNAPSHOT'
         compile group: 'com.google.guava', name: 'guava', version: '14.0.1'
 
         runtime('org.postgresql:postgresql:9.3-1100-jdbc41') {
