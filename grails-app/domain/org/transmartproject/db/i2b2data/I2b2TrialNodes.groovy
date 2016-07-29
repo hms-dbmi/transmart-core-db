@@ -30,7 +30,7 @@ class I2b2TrialNodes implements Serializable {
     String trial
 
     static mapping = {
-        table    name:      'i2b2_trial_nodes', schema: 'i2b2metadata'
+        table    name:      'i2b2_trial_nodes', schema: 'deapp'
         id       composite: ['fullName', 'trial']
 
         fullName column: 'c_fullname'

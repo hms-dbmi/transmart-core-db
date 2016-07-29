@@ -349,14 +349,14 @@ class H2Views {
     }
 
     void createI2b2TrialNodes() {
-        if (handleCurrentState('I2B2METADATA', 'I2B2_TRIAL_NODES')) {
+        if (handleCurrentState('DEAPP', 'I2B2_TRIAL_NODES')) {
             return
         }
 
-        log.info 'Creating I2B2METADATA.I2B2_TRIAL_NODES'
+        log.info 'Creating DEAPP.I2B2_TRIAL_NODES'
 
         sql.execute '''
-            CREATE VIEW I2B2METADATA.I2B2_TRIAL_NODES(C_FULLNAME, TRIAL) AS
+            CREATE VIEW DEAPP.I2B2_TRIAL_NODES(C_FULLNAME, TRIAL) AS
             SELECT
                 A.c_fullname,
                 substr (A.c_comment, 7) -- remove 'trial:' prefix
